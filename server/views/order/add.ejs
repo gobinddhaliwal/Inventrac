@@ -1,0 +1,89 @@
+<% include ../partials/header.ejs %>
+
+<!-- Content for the Add Page -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+               
+                <div class="form-group">
+                    <label for="productlist">Product Name</label>
+                    <select name="prod" id="prod">
+                            <% for(let count = 0; count < product.length; count++) { %>
+                                <option><%= product[count].productName %></option>
+                                <% } %>
+                    </select>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="orderDescriptionTextField">Order Description</label>
+                    <input type="text" class="form-control" 
+                    id="orderDescriptionTextField" 
+                    placeholder="Enter order Description"
+                    name="orderDescription"
+                    required>
+                </div> -->
+
+                <div class="form-group">
+                        <label for="productQuantity">Product Quantity</label>
+                        <input type="text" class="form-control" 
+                        id="productQuantity" 
+                        placeholder="Enter product Quantity"
+                        name="productQuantity"
+                        required>
+                </div>
+
+                <div class="form-group">
+                        <label for="orderPlaceDate">Order Placed Date</label>
+                        <input type="text" class="form-control" 
+                        id="orderPlaceDate" 
+                        placeholder="Enter order Placed Date"
+                        name="orderPlaceDate"
+                        required>
+                </div>
+
+                <div class="form-group">
+                        <label for="orderDeliveryDate">Order Delivery Date</label>
+                        <input type="text" class="form-control" 
+                        id="orderDeliveryDate" 
+                        placeholder="Enter  Order Delivery Date"
+                        name="orderDeliveryDate"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="Location">Location</label>
+                    <input type="text" class="form-control" 
+                    id="Location" 
+                    placeholder="Enter Order Location"
+                    name="Location"
+                    required>
+                    <div class="form-group">
+                            <label for="Status">Status</label>
+                           <select name="Status" id="Status">
+                               <option value="In-Production">In-Production</option>
+                               <option value="In-Transit">In-Transit</option>
+                               <option value="Confirmed">Confirmed</option>
+                        </select>
+                
+            </div>
+
+                   
+
+
+                <button type="submit" class="btn btn-primary">
+                <i class="fas fa-edit"></i> Submit</button>
+                <a href="/order-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel</a>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<% include ../partials/footer.ejs %>

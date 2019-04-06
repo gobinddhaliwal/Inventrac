@@ -1,0 +1,27 @@
+<% include ./partials/header.ejs %>
+
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">Welcome to <%= title %></h1>
+        <% if ((title == "Contact") && (displayName == "admin")) { %>
+          <a class="btn btn-primary" href="/product-list" role="button">Product List</a>
+        <% } %>
+      
+        <% if ((title == "Home") ) { %>
+          <img src = "inven.jpg"/>
+          
+        <% } %>
+
+        <% if ((title == "About") ) { %>
+          
+          <h3 style="font-family: 'Times New Roman', Times, serif">Inventory Management System is a one step solution to track your inventory from any place along with the feature of GPS tracking.</h3>
+          <h3 style="font-family: 'Times New Roman', Times, serif" >Shipper and receiver both are notified by the feature of email to know where there product is.</h3>
+          
+          
+        <% } %>
+      
+      </div>
+    </div>
+
+  
+<% include ./partials/footer.ejs %>

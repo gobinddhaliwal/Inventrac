@@ -1,0 +1,100 @@
+<% include ../partials/header.ejs %>
+
+<!-- Content for the Add Page -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+
+                <div class="form-group">
+                    <label for="CustomerFirstNameTextField">Customer First Name</label>
+                    <input type="text" class="form-control" 
+                    id="CustomerFirstNameTextField" 
+                    placeholder="Enter Customer First Name"
+                    name="customerFirstName"
+                    required>
+                </div>
+
+                <div class="form-group">
+                        <label for="CustomerLastNameTextField">Customer Last Name</label>
+                        <input type="text" class="form-control" 
+                        id="CustomerLastNameTextField" 
+                        placeholder="Enter Customer Last Name"
+                        name="customerLastFirstName"
+                        required>
+                </div>
+
+                <div class="form-group">
+                        <label for="CustomerEmailTextField">Customer Email</label>
+                        <input type="text" class="form-control" 
+                        id="CustomerEmailTextField" 
+                        placeholder="Enter Customer Email"
+                        name="customerEmail"
+                        required>
+                </div>
+
+                <div class="form-group">
+                        <label for="CustomerPhoneTextField">Customer Phone</label>
+                        <input type="text" class="form-control" 
+                        id="CustomerPhoneTextField" 
+                        placeholder="Enter Customer Phone"
+                        name="customerPhone"
+                        required>
+                </div>
+
+                    <div class="form-group">
+                                    <label for="CustomerAddressTextField">Customer Address</label>
+                                    <input type="text" class="form-control" 
+                                    id="CustomerAddressTextField" 
+                                    placeholder="Enter Customer Address"
+                                    name="customerAddress"
+                                    required>
+                            </div>
+
+                                <div class="form-group">
+                                        <label for="CustomerCityTextField">Customer City</label>
+                                        <input type="text" class="form-control" 
+                                        id="CustomerCityTextField" 
+                                        placeholder="Enter Customer City"
+                                        name="customerCity"
+                                        required>
+                                    </div>
+
+                                    <div class="form-group">
+                                            <label for="CustomerPostalCodeTextField">Customer Postal Code</label>
+                                            <input type="text" class="form-control" 
+                                            id="CustomerPostalCodeTextField" 
+                                            placeholder="Enter Customer Postal Code"
+                                            name="customerPostalCode"
+                                            required>
+                                        </div>
+
+                                        <div class="form-group">
+                                                <label for="CustomerOrderPlacedIdTextField">Customer Order Placed Id</label>
+                                                <input type="text" class="form-control" 
+                                                id="CustomerOrderPlacedIdTextField" 
+                                                placeholder="Enter Customer Order Placed Id"
+                                                name="orderPlacedId"
+                                                required>
+                                            </div>
+
+
+
+                <button type="submit" class="btn btn-primary">
+                <i class="fas fa-edit"></i> Submit</button>
+                <a href="/customer-list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> Cancel</a>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<% include ../partials/footer.ejs %>
