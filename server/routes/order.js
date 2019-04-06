@@ -32,6 +32,6 @@ router.post('/edit/:id', requireAuth, orderController.processEditPage);
 /* GET request to perform the delete action */
 router.get('/delete/:id', requireAuth, orderController.performDelete);
 router.get('/track/:id',requireAuth,orderController.trackOrder);
-router.post('/search',requireAuth,orderController.search);
+router.get('/search/:key',requireAuth,orderController.search);
 
 module.exports = router;

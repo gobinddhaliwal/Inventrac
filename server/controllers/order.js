@@ -163,8 +163,9 @@ module.exports.trackOrder = (req,res,next) => {
     });
 }
 module.exports.search = (req,res, next) =>{
-    let q = req.body.q;
-    orderModel.find({orderDescription:q}, (err, orderList) => {
+    let q = req.params.key;
+    let query= {"orderDescription":q};
+    orderModel.find(query, (err, orderList) => {
         if(err) {
             console.log(err);
             res.end(err);
